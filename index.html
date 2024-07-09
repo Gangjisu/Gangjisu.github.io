@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Gang's BLOG</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+        .libre-barcode-128-text-regular {
+            font-family: "Libre Barcode 128 Text", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <div id="like_button_container"></div>
-    
-    <!-- React를 실행. -->
-    <!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    
-    <!-- 만든 React 컴포넌트를 실행. -->
-    <script src="like_button.js"></script>
+    <div class="libre-barcode-128-text-regular" style="font-size: 50pt">GANG'S BLOG</div>
+    <ul style=" list-style: none; line-height: 50px; font-weight: 10;">
+        <li>HOME</li>
+        <li>HOBBY</li>
+        <li>MAJOR</li>
+        <li>CONTACT</li>
+    </ul>
 </body>
 </html>
