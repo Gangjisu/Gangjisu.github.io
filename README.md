@@ -1,1 +1,0 @@
-# Gangjisu.github.io
