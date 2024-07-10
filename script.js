@@ -23,38 +23,13 @@ $(document).ready(function() {
     // Update the clock every second
     setInterval(updateClock, 1);
 
-    //fill blank in screen
-    function fillWithRandomNumbers() {
-        var windowWidth = $(window).width();
-        var charWidth = getTextWidth('0', $('#randomNumbers').css('font'));
-        var numChars = Math.floor(windowWidth / charWidth) - 22;
-        var randomNumbers = '';
-
-        for (var i = 0; i < numChars; i++) {
-            randomNumbers += Math.floor(Math.random() * 10);
-        }
-
-        $('#randomNumbers').text(randomNumbers);
-    }
-
-    function getTextWidth(text, font) {
-        var canvas = document.createElement('canvas');
-        var context = canvas.getContext('2d');
-        context.font = font;
-        var metrics = context.measureText(text);
-        return metrics.width;
-    }
-
-    // Initial call to fill the div immediately
-    fillWithRandomNumbers();
-
-    // Update the content when the window is resized
-    $(window).resize(fillWithRandomNumbers);
-
     //load content
-    $('#loadButton').click(function() {
-        $('#contentArea').load('content.html', function(response, status, xhr) {
-            if (status == "error") {
+    $('.loadButton').click(function() {
+        var buttonText = $(this).text().toLowerCase();
+        var filePath = buttonText + '/' + buttonText + '.html';
+
+        $('#contentArea').load(filePath, function(response, status, xhr) {
+            if (status === "error") {
                 var msg = "Sorry but there was an error: ";
                 $('#contentArea').html(msg + xhr.status + " " + xhr.statusText);
             }
