@@ -1,0 +1,31 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap');
+
+.bodoni-moda-sc {
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* <uniquifier>: Use a unique and descriptive class name
+    <weight>: Use a value from 400 to 900 */
+}
+
+.libre-barcode-128-text-regular {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zilla-slab-highlight-regular {
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zilla-slab-highlight-bold {
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: 700;
+    font-style: normal;
+}
