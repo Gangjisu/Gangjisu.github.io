@@ -35,4 +35,22 @@ $(document).ready(function() {
             }
         });
     });
+
+    //////////////////////////////
+    // Add post button click event
+    $('#add-post').click(function() {
+        var title = $('#title').val();
+        var content = $('#content').val();
+
+        if (title && content) {
+            var post = '<div class="post"><h2>' + title + '</h2><p>' + content + '</p></div>';
+            $('#posts').append(post);
+
+            // Clear input fields
+            $('#title').val('');
+            $('#content').val('');
+        } else {
+            alert('Please fill out both fields.');
+        }
+    });
 });
