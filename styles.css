@@ -34,7 +34,7 @@
     border: none 1px;
     margin-block: 1%;
     height: 55px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .button:hover {
