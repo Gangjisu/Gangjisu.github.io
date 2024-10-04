@@ -6,9 +6,28 @@
     <title>Page Editor</title>
 </head>
 <body>
-
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
     <script src="../script.js"></script>
+    <script>
+        $.ajax({
+            url: "https://open-api.bser.io",
+            method: "GET",
+            headers: {
+                "Authorization": "b3KKuHC2eR9V5hiDfAzG3aHvzWnkHx4T9zKZpFSl"
+            },
+            error: function(xhr, status, error) {
+                console.error("보안 데이터 수신 실패:", error);
+            }
+        })
+            .done( function (msg) {
+                alert("Data Saved: " + msg);
+            })
+        ;
+    </script>
+
+    <h1>Eternal Return API</h1>
+
 </body>
 </html>
