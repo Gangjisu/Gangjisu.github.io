@@ -1,0 +1,49 @@
+body {
+}
+
+.Main_Banner {
+    height: 100px;
+}
+
+.Main_menu {
+    width: 1024px;
+}
+
+.Sub_menu{
+    transition: 1s;
+    width: 256px;
+    padding-block: 15px;
+    text-align: center;
+    font-weight: bolder;
+
+    /*drag,select disable*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+.Sub_menu:hover{
+    background-color: darkgray;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.Content {
+    display: none;
+    padding: 15px;
+}
+
+.Main_Body {
+    width: 100%;
+    display: flex;
+}
+
+#Body_1
+{
+    width: 256px;
+}
+#Body_2
+{
+    width: auto;
+}
