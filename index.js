@@ -32,16 +32,3 @@ function Toggle(button_id, content_id) {
     }
 
 }
-
-//파일 다운로드
-function download_file() 
-{
-    const blob = new Blob([this.content], {type: 'text/plain'})
-    const url = window.URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = `${this.$store.state.nickname}_${this.title}.md`
-    a.click()
-    a.remove()
-    window.URL.revokeObjectURL(url);
-}
