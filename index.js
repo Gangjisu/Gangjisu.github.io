@@ -1,9 +1,11 @@
+//페이지 이동
 function page_href(url)
 {
     window.location.href = url;
 }
 
 
+//페이지 메뉴 버튼
 function Toggle(button_id, content_id) {
 
     const toggleButton = document.getElementById(button_id);
@@ -29,19 +31,17 @@ function Toggle(button_id, content_id) {
         toggleButton.style.backgroundColor = ''; //if input color in '' error
     }
 
-    //파일 다운로드
-    function download_file(filename) {
-        // const filename = 'example.txt';
-        const apiUrl = '/fileDownload?filename=' + filename;
-
-        const element = document.createElement('a');
-        element.href = apiUrl;
-        element.download = filename;
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-    }
-
 }
 
+//파일 다운로드
+function download_file(filename) {
+    // const filename = 'example.txt';
+    const apiUrl = '/fileDownload?filename=' + filename;
 
+    const element = document.createElement('a');
+    element.href = apiUrl;
+    element.download = filename;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
