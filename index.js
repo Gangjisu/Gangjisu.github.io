@@ -1,5 +1,3 @@
-console.log('Happy developing')
-
 function page_href(url)
 {
     window.location.href = url;
@@ -31,35 +29,35 @@ function Toggle(button_id, content_id) {
         toggleButton.style.backgroundColor = ''; //if input color in '' error
     }
 
-    // GitHub 파일의 raw URL
-    const fileUrl = 'https://github.com/Gangjisu/TermProject/blob/main/assets/travel_picture/picture_osaka_1.jpg?raw=true';
+    const download_file = async (filename) => {
+        //const filename = 'example.txt';
+        
+        // GET 요청 보내기
+        fetch('http://localhost:8080/fileDownload?filename=' + filename, {
+            method: 'GET',
+        })
+        .then((response) => response.blob())
+        .then((blob) => {
+            // blob 객체를 통해 URL 생성
+            const url = window.URL.createObjectURL(blob);
+            const element = document.createElement('a');
 
-    // 파일 다운로드 함수
-    async function downloadFile(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error('파일을 다운로드할 수 없습니다.');
+            // 생성한 URL과 다운로드될 파일명 설정
+            element.setAttribute('href', url);
+            element.setAttribute('download', '다운로드될파일명.txt');
 
-            const blob = await response.blob();
-            const downloadUrl = URL.createObjectURL(blob);
+            // 생성된 a tag를 body에 추가
+            document.body.appendChild(element);
 
-            // 다운로드 링크 생성
-            const a = document.createElement('a');
-            a.href = downloadUrl;
-            a.download = 'downloaded_file.txt'; // 저장할 파일명 설정
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            // a tag 클릭을 통해 파일 다운로드 시도
+            element.click();
 
-            // 객체 URL 해제
-            URL.revokeObjectURL(downloadUrl);
-        } catch (error) {
-            console.error('다운로드 실패:', error);
-        }
+            // 다운로드 후 a tag와 URL을 정리
+            element.parentNode.removeChild(element);
+            window.URL.revokeObjectURL(url);
+        });
     }
 
-    // 파일 다운로드 호출
-    downloadFile(fileUrl);
 
 }
 
