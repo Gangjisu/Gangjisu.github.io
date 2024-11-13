@@ -34,7 +34,7 @@ function Toggle(button_id, content_id) {
 }
 
 //파일 다운로드
-download_file() 
+function download_file() 
 {
     const blob = new Blob([this.content], {type: 'text/plain'})
     const url = window.URL.createObjectURL(blob)
