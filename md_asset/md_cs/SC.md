@@ -1,5 +1,5 @@
 # 전산통계
-
+<link rel="stylesheet" href="../../main.css">
 
 # 20241119
 

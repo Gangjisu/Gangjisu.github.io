@@ -23,7 +23,7 @@ function Toggle(button_id, content_id) {
 
     if(content.style.display === 'none') {
         content.style.display = 'block';
-        toggleButton.style.backgroundColor = 'gray';
+        toggleButton.style.backgroundColor = 'lightgray';
     }
     else
     {

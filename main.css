@@ -1,5 +1,16 @@
 body {
 }
+details {
+    padding-left: 15px;
+    border-radius: 20px;
+    border: 1px solid darkslategray;
+    height: 65px;
+}
+details[open] {
+    height: auto;
+}
+
+
 
 .Main_Banner {
     height: 100px;
@@ -14,7 +25,8 @@ body {
     width: 256px;
     padding-block: 15px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: medium;
 
     /*drag,select disable*/
     -webkit-user-select:none;
@@ -33,10 +45,6 @@ body {
     display: none;
     padding: 15px;
 }
-.Content iframe{
-    border: none;
-}
-
 
 .Main_Body {
     width: 100%;
@@ -51,3 +59,4 @@ body {
 {
     width: auto;
 }
+
